@@ -1,0 +1,22 @@
+{
+  "name": "bind",
+  "main": "index.js",
+  "version": "0.0.1",
+  "description": "Anotated implementation of Function.prototype.bind, copied from MDN and Underscore.",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "bind"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
