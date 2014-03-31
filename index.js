@@ -12,6 +12,10 @@
 }(this, function() {
 
   function bind(fn, thisArg) {
+    // Use the native bind method if available.
+    if ( Function.prototype.bind ) {
+      return Function.prototype.bind.apply( fn, Array.prototype.slice.call(arguments, 1) );
+    }
 
     var slice, target, args, bound;
 
@@ -20,11 +24,6 @@
 
     // The target (original) function, which will be bound.
     target = fn;
-
-    // Use the native bind method if available.
-    if ( Function.prototype.bind ) {
-      return Function.prototype.bind.apply( target, slice.call(arguments, 1) );
-    }
 
     // As well as function context, we can bind arguments, which come after
     // thisArg, hence we get all arguments after the first two.
